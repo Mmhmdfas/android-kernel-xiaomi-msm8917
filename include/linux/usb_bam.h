@@ -512,13 +512,12 @@ static inline bool usb_bam_get_prod_granted(enum usb_ctrl bam_type, u8 idx)
 {
 	return false;
 }
-
-static inline int usb_bam_alloc_fifos(enum usb_ctrl cur_bam, u8 idx)
+int usb_bam_alloc_fifos(enum usb_ctrl cur_bam, u8 idx)
 {
 	return false;
 }
 
-static inline int usb_bam_free_fifos(enum usb_ctrl cur_bam, u8 idx)
+int usb_bam_free_fifos(enum usb_ctrl cur_bam, u8 idx)
 {
 	return false;
 }
