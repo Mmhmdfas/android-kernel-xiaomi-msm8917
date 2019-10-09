@@ -2,13 +2,13 @@ version: 2.1
 jobs:
   compile:
     docker:
-      - image: ubuntu:19.10
+      - image: ubuntu:18.04
     steps:
-      - run: apt-get -y update && apt-get -y upgrade && apt-get -y install bc binutils g++ build-essential zip curl libstdc++6 git wget
+      - run: apt-get -y update && apt-get -y upgrade && apt-get -y install bc binutils python g++ build-essential zip curl libstdc++6 git wget
       - run: git clone https://github.com/Mmhmdfas/android-kernel-xiaomi-msm8917 -b test --depth=1 .
-      - run: wget https://raw.githubusercontent.com/Mmhmdfas/script/master/gnu
-      - run: chmod +x gnu
-      - run: bash gnu
+      - run: wget https://raw.githubusercontent.com/Mmhmdfas/script/master/clang-push
+      - run: chmod +x clang-push
+      - run: bash clang-push
 workflows:
   version: 2.1
   cooking:
